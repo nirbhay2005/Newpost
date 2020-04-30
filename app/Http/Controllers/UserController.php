@@ -26,17 +26,16 @@ class UserController extends ApiController
      * @throws InvalidCredentialsException
      */
 
-    protected $repository=UserRepository::class;
+    protected $repository = UserRepository::class;
 
-    protected $createJob=BaseJob::class;
-    protected $storeJobMethod ='create';
-    protected $storeRequest=UserCreateRequest::class;
+    protected $createJob = BaseJob::class;
+    protected $storeJobMethod = 'create';
+    protected $storeRequest = UserCreateRequest::class;
 
-    protected $updateJob=BaseJob::class;
-    protected $updateJobMethod="update";
-    protected $updateRequest=UserUpdateRequest::class;
+    protected $updateJob = BaseJob::class;
+    protected $updateJobMethod = "update";
+    protected $updateRequest = UserUpdateRequest::class;
 
     protected $deleteJob = BaseJob::class;
-    protected $deleteRequest=UserDeleteRequest::class;
-
+    protected $deleteRequest = UserDeleteRequest::class;
 }
