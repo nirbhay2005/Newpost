@@ -11,7 +11,7 @@ class UserCreateRequest extends BaseRequest
     public function rules()
     {
         return [
-            'name'=>'required|string|max:10',
+            'name'=>'required|string|max:20',
             'email' => 'required|email',
             'password' => 'required|string'
         ];

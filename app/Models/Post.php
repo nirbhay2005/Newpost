@@ -9,8 +9,6 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
-use Laravel\Models\Comment;
 
 /**
  * Class Post
@@ -35,7 +33,7 @@ class Post extends Model
 	];
 
 	protected $fillable = [
-		'description',
+		'post_desc',
 		'user_id'
 	];
 

@@ -11,9 +11,9 @@ class UserUpdateRequest extends BaseRequest
     public function rules()
     {
         return [
-            'name'=>'string|max:10',
+            'name'=>'string|max:20',
             'email' => 'email',
-            'password' => 'string'
+           'password' => 'sometimes|string'
         ];
     }
 }
