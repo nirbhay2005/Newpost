@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('authenticate', 'AuthenticationController@doLogin')->name('authenticate.store');
+Route::group(['middleware'=>'auth:api'],function () {
+    Route::resource('user','UserController');
+    Route::resource('post','PostsController');
+    Route::resource('comment','CommentsController');
+});
