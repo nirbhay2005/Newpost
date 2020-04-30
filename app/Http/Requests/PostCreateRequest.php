@@ -14,9 +14,9 @@ class PostCreateRequest extends BaseRequest
     public function rules()
     {
         return [
-            'description'=>'required|string|max:255',
-            'user_id' => ['required',
-                RequestService::exists(User::class)]
+            'post_desc'=>'required|string|max:255',
+            //'user_id' => ['required',
+              //  RequestService::exists(User::class)]
         ];
     }
 }
