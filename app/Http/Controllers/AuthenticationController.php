@@ -7,10 +7,13 @@ namespace App\Http\Controllers;
 use App\Constants\AppConstants;
 use App\Http\Requests\LoginRequest;
 use App\Models\User;
+use App\Repositories\UserRepository;
+use DemeterChain\B;
 use Illuminate\Support\Facades\Auth;
 use Luezoid\Laravelcore\Constants\ErrorConstants;
 use Luezoid\Laravelcore\Exceptions\InvalidCredentialsException;
 use Luezoid\Laravelcore\Http\Controllers\ApiController;
+use Luezoid\Laravelcore\Jobs\BaseJob;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
 class AuthenticationController extends ApiController
@@ -30,6 +33,7 @@ class AuthenticationController extends ApiController
         $email = $request->json('email');
         $password = $request->json('password');
 
+
         /** @var User $user */
         $user = User::where('email', '=', $email)->first();
         if (!$user) {
@@ -46,4 +50,5 @@ class AuthenticationController extends ApiController
         ];
         return $this->standardResponse($result);
     }
+
 }
