@@ -17,8 +17,8 @@ class CommentCreateRequest extends BaseRequest
             'comm_desc'=>'required|string|max:30',
             'post_id' => ['required',
                 RequestService::exists(Post::class)],
-            'user_id' => ['required',
-                RequestService::exists(User::class)]
+           // 'user_id' => ['required',
+             //   RequestService::exists(User::class)]
         ];
     }
 }
