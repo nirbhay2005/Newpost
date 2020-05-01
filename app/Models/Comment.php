@@ -8,7 +8,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
+
 /**
  * Class Comment
  *
@@ -49,6 +49,6 @@ class Comment extends Model
 
 	public function user()
 	{
-		return $this->belongsTo(\App\Models\User::class);
+		return $this->belongsTo(User::class);
 	}
 }
