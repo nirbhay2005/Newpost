@@ -16,12 +16,14 @@ use App\Repositories\PostRepository;
 use App\Repositories\UserRepository;
 use DemeterChain\B;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Luezoid\Laravelcore\Constants\ErrorConstants;
 use Luezoid\Laravelcore\Exceptions\InvalidCredentialsException;
 use Luezoid\Laravelcore\Http\Controllers\ApiController;
 use Luezoid\Laravelcore\Jobs\BaseJob;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use App\Http\Requests\UserCreateRequest;
+use App\Http\Controllers\Controller;
 class PostsController extends ApiController
 {
     /**
@@ -31,6 +33,7 @@ class PostsController extends ApiController
      */
 
     protected $repository=PostRepository::class;
+
 
     protected $createJob=BaseJob::class;
     protected $storeJobMethod ='create';

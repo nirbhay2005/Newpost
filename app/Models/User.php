@@ -15,7 +15,6 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Post;
 use App\Models\Comment;
-
 /**
  * Class User
  *

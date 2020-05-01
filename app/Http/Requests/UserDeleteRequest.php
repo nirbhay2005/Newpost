@@ -11,7 +11,7 @@ class UserDeleteRequest extends BaseRequest
     public function rules()
     {
         return [
-            'id'=>'required|int',
+            //'id'=>'required|int',
         ];
     }
 }
